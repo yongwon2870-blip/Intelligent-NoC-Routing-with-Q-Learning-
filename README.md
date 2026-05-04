@@ -22,7 +22,7 @@
 *   Execution:
     ```bash
     # 1. Repository Clone
-    git clone [https://github.com/본인아이디/Q-Learning-NoC-Routing.git](https://github.com/본인아이디/Q-Learning-NoC-Routing.git)
+    git clone [https://github.com/yongwon2870-blip/Q-Learning-NoC-Routing.git](https://github.com/yongwon2870-blip/Q-Learning-NoC-Routing.git)
     cd Q-Learning-NoC-Routing
     
     # 2. 모델 학습 및 결정론적(Deterministic) 최적 경로 탐색 텍스트 결과 확인
