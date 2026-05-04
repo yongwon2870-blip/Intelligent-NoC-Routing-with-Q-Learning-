@@ -21,7 +21,7 @@ def train_q_learning(episodes = 1000): # Q-Learning 에이전트를 학습시키
         done = False
         total_reward = 0
 
-        while not done:  # Action 선택 (Epsilon-Greedy 정책)
+        while not done:  # Action 선택 (Epsilon-Greedy)
             if np.random.uniform(0, 1) < epsilon:
                 action = np.random.randint(env.n_actions)  # 무작위 탐색(새로운 경로 개척)
             else:
