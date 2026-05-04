@@ -6,7 +6,7 @@ def train_q_learning(episodes = 1000): # Q-Learning 에이전트를 학습시키
     env = NoCRoutingEnv() # 환경 및 Q-Table(라우팅 테이블) 초기화
     q_table = np.zeros((env.n_states, env.n_actions)) # 16개의 노드(State)에서 4가지 방향(Action)으로 갈 때의 가치를 저장하는 표 (모두 0으로 시작)
 
-    # 2. 하이퍼파라미터 세팅(강화학습의 학습 성향 결정)
+    # 1. 하이퍼파라미터 세팅(강화학습의 학습 성향 결정)
     alpha = 0.1  # 학습률 (Learning Rate): 새로운 정보를 얼마나 빠르게 받아들일지
     gamma = 0.9  # 할인율 (Discount Factor): 미래의 보상을 얼마나 중요하게 생각할지
     epsilon = 1.0  # 탐험률 (Exploration Rate): 처음엔 무작위로 길을 찾도록 100%로 설정
@@ -15,7 +15,7 @@ def train_q_learning(episodes = 1000): # Q-Learning 에이전트를 학습시키
 
     reward_all_episodes = [] # 시각화를 위한 점수 기록
 
-    # 3. Q-Learning 학습 루프
+    # 2. Q-Learning 학습 루프
     for episode in range(episodes):
         state = env.reset()  # 에피소드마다 패킷을 출발지(S)로 원위치
         done = False
@@ -48,7 +48,7 @@ def train_q_learning(episodes = 1000): # Q-Learning 에이전트를 학습시키
     return env, q_table, reward_all_episodes
 
 def test_agent(env, q_table):
-    # 4. 학습된 최적 경로(Optimal Path) 검증 및 시각화
+    # 3. 학습된 최적 경로(Optimal Path) 검증 및 시각화
     print('최적 라우팅 경로 탐색 결과')
     state = env.reset()
     env.render()  # 초기 상태 출력
